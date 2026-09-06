@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cozy Stitches | Hooked on Handmade</title>
+  <meta name="description" content="Cozy Stitches — cute, handmade crochet creations. Hooked on Handmade.">
+  <style>
+    :root{
+      --pink:#f8d9e4; --pink2:#fff1f5; --green:#a8c8ae; --green2:#e5f0e5;
+      --deep:#49634f; --cream:#fffaf7; --text:#4d4a49; --white:#fff;
+      --shadow:0 12px 35px rgba(73,99,79,.12); --radius:24px;
+    }
+    *{box-sizing:border-box;scroll-behavior:smooth}
+    body{margin:0;font-family:"Trebuchet MS",Arial,sans-serif;color:var(--text);background:var(--cream);line-height:1.6}
+    nav{position:sticky;top:0;z-index:20;background:rgba(255,250,247,.94);backdrop-filter:blur(10px);border-bottom:1px solid #f0e3e5}
+    .nav-inner{max-width:1100px;margin:auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between}
+    .brand{font-weight:900;color:var(--deep);font-size:1.35rem;text-decoration:none}
+    .brand span{color:#d88da8}
+    .links{display:flex;gap:8px;flex-wrap:wrap}
+    .links a{color:var(--deep);text-decoration:none;padding:8px 13px;border-radius:999px;font-weight:700}
+    .links a:hover{background:var(--pink)}
+    section{max-width:1100px;margin:auto;padding:78px 20px}
+    .hero{max-width:none;background:linear-gradient(135deg,var(--pink2),var(--green2));min-height:650px;display:flex;align-items:center}
+    .hero-inner{max-width:1100px;width:100%;margin:auto;padding:70px 20px;display:grid;grid-template-columns:1.15fr .85fr;gap:45px;align-items:center}
+    .eyebrow{color:#9b6680;font-weight:900;text-transform:uppercase;letter-spacing:2px}
+    h1{font-size:clamp(3rem,7vw,5.8rem);line-height:.95;margin:12px 0;color:var(--deep)}
+    h2{font-size:2.4rem;color:var(--deep);margin:0 0 12px}
+    .hero p{font-size:1.15rem;max-width:600px}
+    .btn{display:inline-block;background:var(--deep);color:white;text-decoration:none;border:0;border-radius:999px;padding:13px 22px;font-weight:900;cursor:pointer;margin:8px 8px 0 0}
+    .btn.alt{background:white;color:var(--deep);border:2px solid var(--green)}
+    .yarn-art{background:white;border-radius:48% 52% 45% 55%;min-height:390px;display:grid;place-items:center;box-shadow:var(--shadow);position:relative;overflow:hidden}
+    .yarn-art:before{content:"🧶";font-size:10rem;filter:drop-shadow(0 15px 12px rgba(0,0,0,.08))}
+    .flower{position:absolute;font-size:2rem}.f1{top:35px;left:50px}.f2{right:55px;top:75px}.f3{bottom:45px;left:70px}.f4{right:65px;bottom:55px}
+    .intro{text-align:center;max-width:800px}
+    .intro p{font-size:1.08rem}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:30px}
+    .card{background:white;border-radius:var(--radius);padding:26px;box-shadow:var(--shadow);border:1px solid #f1e5e6}
+    .product{overflow:hidden;padding:0}.product .pic{height:230px;display:grid;place-items:center;background:linear-gradient(135deg,#fde7ef,#e8f2e8);font-size:6rem}
+    .product .content{padding:22px}.price{color:#c16f8d;font-weight:900;font-size:1.15rem}
+    .about{display:grid;grid-template-columns:.8fr 1.2fr;gap:35px;align-items:center}
+    .about-art{min-height:340px;background:var(--pink);border-radius:40px;display:grid;place-items:center;font-size:8rem}
+    .contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:30px}
+    form{background:white;padding:28px;border-radius:var(--radius);box-shadow:var(--shadow)}
+    label{display:block;font-weight:800;color:var(--deep);margin:13px 0 6px}
+    input,textarea{width:100%;padding:13px 14px;border:2px solid #eadfe1;border-radius:14px;font:inherit;background:#fffdfd}
+    input:focus,textarea:focus{outline:none;border-color:var(--green)}
+    textarea{min-height:140px;resize:vertical}
+    .info{background:var(--green2);border-radius:var(--radius);padding:30px}
+    footer{background:var(--deep);color:white;text-align:center;padding:35px 20px}
+    footer strong{color:var(--pink)}
+    .notice{font-size:.9rem;margin-top:10px;color:#716b6b}
+    @media(max-width:780px){
+      .hero-inner,.about,.contact-grid{grid-template-columns:1fr}
+      .cards{grid-template-columns:1fr}
+      .links{gap:2px}.links a{padding:6px 8px;font-size:.9rem}
+      .nav-inner{align-items:flex-start;gap:8px;flex-direction:column}
+      section{padding:58px 18px}.hero{min-height:auto}
+      .yarn-art{min-height:280px}
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-inner">
+      <a class="brand" href="#home">Cozy <span>Stitches</span> 🧶</a>
+      <div class="links">
+        <a href="#home">Home</a><a href="#about">About</a><a href="#products">Products</a><a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-inner">
+        <div>
+          <div class="eyebrow">Handmade with love ♡</div>
+          <h1>Cozy<br>Stitches</h1>
+          <p>Little handmade crochet creations made with lots of love, care and a whole lot of yarn.</p>
+          <p><strong>Hooked on Handmade.</strong></p>
+          <a class="btn" href="#products">See the collection</a>
+          <a class="btn alt" href="#contact">Get in touch</a>
+        </div>
+        <div class="yarn-art">
+          <span class="flower f1">🌸</span><span class="flower f2">🌿</span>
+          <span class="flower f3">🌷</span><span class="flower f4">🍃</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="about">
+        <div class="about-art">🧶🌸</div>
+        <div>
+          <div class="eyebrow">A little about us</div>
+          <h2>Made slowly. Made lovingly.</h2>
+          <p>Welcome to Cozy Stitches! What started with yarn, a crochet hook and a love for handmade things has grown into a little collection of adorable creations.</p>
+          <p>Every piece is crocheted with care, making each one feel extra special. Whether you're looking for a cute little gift or something cozy to keep for yourself, there's a stitch waiting for you.</p>
+          <p><strong>Thank you for supporting handmade. ♡</strong></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="products">
+      <div class="intro">
+        <div class="eyebrow">The catalogue</div>
+        <h2>Made for you 🌷</h2>
+        <p>Browse some of our handmade favourites. Availability can change, so please contact Cozy Stitches to check what is currently available.</p>
+      </div>
+      <div class="cards">
+        <article class="card product">
+          <div class="pic">🐶</div>
+          <div class="content">
+            <h3>Crochet Doggies</h3>
+            <p>Cute handmade crochet doggies — perfect as a little gift or a cuddly handmade companion.</p>
+            <div class="price">R280 each</div>
+          </div>
+        </article>
+        <article class="card product">
+          <div class="pic">🐮</div>
+          <div class="content">
+            <h3>Mini Cow Keychains</h3>
+            <p>Adorable mini crochet cows, approximately 10 cm tall, ready to add a little handmade charm wherever you go.</p>
+            <div class="price">R120 each</div>
+          </div>
+        </article>
+        <article class="card product">
+          <div class="pic">🌸</div>
+          <div class="content">
+            <h3>Coming Soon</h3>
+            <p>More cute handmade creations are on the way. Check back soon or get in touch for the latest catalogue.</p>
+            <div class="price">Watch this space ♡</div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="contact-grid">
+        <div class="info">
+          <div class="eyebrow">Say hello</div>
+          <h2>Let's chat 💌</h2>
+          <p>Have a question about a product? Want to check availability? Send us a message and we'll get back to you.</p>
+          <p><strong>Cozy Stitches</strong><br>Hooked on Handmade.</p>
+          <p class="notice">Replace the contact details below with your preferred WhatsApp, email or social-media details before publishing.</p>
+        </div>
+        <form id="contactForm">
+          <label for="name">Your name</label>
+          <input id="name" name="name" required placeholder="Your name">
+          <label for="email">Email address</label>
+          <input id="email" name="email" type="email" required placeholder="you@example.com">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required placeholder="What would you like to ask?"></textarea>
+          <button class="btn" type="submit">Send enquiry ♡</button>
+          <div id="formNotice" class="notice"></div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <strong>Cozy Stitches</strong> · Hooked on Handmade 🧶<br>
+    <small>© <span id="year"></span> Cozy Stitches. Handmade with love.</small>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("contactForm").addEventListener("submit", function(e){
+      e.preventDefault();
+      const name = document.getElementById("name").value.trim();
+      document.getElementById("formNotice").textContent =
+        `Thanks, ${name}! The form is ready — connect it to your email/WhatsApp service before publishing so enquiries are delivered to you. ♡`;
+      this.reset();
+    });
+  </script>
+</body>
+</html>
